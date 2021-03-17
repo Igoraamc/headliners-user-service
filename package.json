@@ -1,6 +1,10 @@
 {
   "name": "headliners-delivery-stack",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.x",
+    "yarn": "1.x"
+  },
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -14,9 +18,6 @@
     "tslint": "^6.1.3",
     "typescript": "^4.2.3",
     "uuid": "^8.3.2"
-  },
-  "engines": {
-    "node": "12.x"
   },
   "keywords": [
     "node",
