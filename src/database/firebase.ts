@@ -1,8 +1,6 @@
 import * as admin from 'firebase-admin';
 import { v4 as uuid } from 'uuid';
 
-import serviceAccount from "../../secret/serviceAccountKey.json";
-
 /**
  * Interface que representa o que deve ser enviado para realizar o cadastro do usuário.
  */
@@ -28,9 +26,9 @@ class Database {
      * Seta os valores da configuração do banco de dados.
      */
     this.svAccount = {
-      privateKey: process.env.PRIVATE_KEY || serviceAccount.private_key,
-      clientEmail: process.env.CLIENT_EMAIL || serviceAccount.client_email,
-      projectId: process.env.PROJECT_ID || serviceAccount.project_id
+      privateKey: process.env.PRIVATE_KEY,
+      clientEmail: process.env.CLIENT_EMAIL,
+      projectId: process.env.PROJECT_ID
     };
 
     if (!admin.apps.length) {
