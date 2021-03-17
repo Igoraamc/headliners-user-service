@@ -7,6 +7,6 @@ const rootRouter = express.Router();
 /**
  * Cadastra a rota de usuários.
  */
-rootRouter.use('/user', userRouters);
+rootRouter.use('/users', userRouters);
 
 export default rootRouter;
