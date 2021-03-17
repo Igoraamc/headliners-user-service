@@ -1,5 +1,6 @@
 import * as admin from 'firebase-admin';
 import { v4 as uuid } from 'uuid';
+import dotenv from 'dotenv';
 
 /**
  * Interface que representa o que deve ser enviado para realizar o cadastro do usuário.
@@ -22,6 +23,9 @@ class Database {
   private svAccount: admin.ServiceAccount;
 
   constructor() {
+    dotenv.config();
+
+    console.log(process.env)
     /**
      * Seta os valores da configuração do banco de dados.
      */
