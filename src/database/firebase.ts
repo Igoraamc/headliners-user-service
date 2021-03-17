@@ -28,9 +28,9 @@ class Database {
      * Seta os valores da configuração do banco de dados.
      */
     this.svAccount = {
-      privateKey: serviceAccount.private_key,
-      clientEmail: serviceAccount.client_email,
-      projectId: serviceAccount.project_id
+      privateKey: process.env.PRIVATE_KEY || serviceAccount.private_key,
+      clientEmail: process.env.CLIENT_EMAIL || serviceAccount.client_email,
+      projectId: process.env.PROJECT_ID || serviceAccount.project_id
     };
 
     if (!admin.apps.length) {
