@@ -22,7 +22,7 @@ class User {
     if (!doc.exists) {
       return res.json({ error: `Unable to find a user with the ID ${id}` });
     }
-    return res.json({ status: doc.data() });
+    return res.json({ data: doc.data() });
   }
 
   /**

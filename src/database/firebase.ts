@@ -24,8 +24,6 @@ class Database {
 
   constructor() {
     dotenv.config();
-
-    console.log(process.env)
     /**
      * Seta os valores da configuração do banco de dados.
      */
